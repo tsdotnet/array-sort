@@ -3,14 +3,12 @@
  * Licensing: MIT
  */
 
-import {compare} from '@tsdotnet/compare/dist/compare';
+import {Selector} from '@tsdotnet/common-interfaces';
 import {Comparison} from '@tsdotnet/compare/dist/Comparison';
+import {compare} from '@tsdotnet/compare/dist/compare';
 import CompareResult from '@tsdotnet/compare/dist/CompareResult';
 import type from '@tsdotnet/compare/dist/type';
 import Order from '@tsdotnet/compare/dist/Order';
-
-type Primitive = string | number | boolean;
-type Selector<TSource, TSelect> = (e: TSource) => TSelect;
 
 function ensureArray<T> (value: T | T[]): T[]
 {
@@ -40,7 +38,7 @@ function ensureArray<T> (value: T | T[]): T[]
  * @param equivalentToNaN
  * @returns {(a:TSource, b:TSource)=>CompareResult}
  */
-export default function createComparer<TSource, TSelect extends Primitive> (
+export default function createComparer<TSource, TSelect extends type.Primitive> (
 	selector: Selector<TSource, TSelect | TSelect[]>,
 	order: Order | Order[] = Order.Ascending,
 	equivalentToNaN: any   = NaN

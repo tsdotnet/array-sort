@@ -3,12 +3,10 @@
  * Licensing: MIT
  */
 
+import {Primitive, Selector} from '@tsdotnet/common-interfaces';
 import * as sorting from './sorting/index';
 import Order from '@tsdotnet/compare/dist/Order';
 import createComparer from './createComparer';
-
-type Primitive = string | number | boolean;
-type Selector<TSource, TSelect> = (e: TSource) => TSelect;
 
 export {
 	sorting,

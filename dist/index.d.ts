@@ -2,11 +2,10 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
+import { Selector, Primitive } from '@tsdotnet/common-interfaces';
 import * as sorting from './sorting/index';
 import Order from '@tsdotnet/compare/dist/Order';
 import createComparer from './createComparer';
-declare type Primitive = string | number | boolean;
-declare type Selector<TSource, TSelect> = (e: TSource) => TSelect;
 export { sorting, createComparer };
 export declare namespace arraySort {
     const quick: typeof sorting.quickSort;
