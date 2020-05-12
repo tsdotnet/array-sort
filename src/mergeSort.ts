@@ -7,15 +7,7 @@
 
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
 import arrayInit from '@tsdotnet/array-init';
-
-type Primitive = string | number | boolean;
-
-interface ArrayLikeWritable<T>
-{
-	length: number;
-
-	[n: number]: T;
-}
+import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
 
 /**
  * Merge internalSort O(n log (n))

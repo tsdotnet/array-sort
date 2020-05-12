@@ -4,11 +4,7 @@
  * Licensing: MIT
  * https://en.wikipedia.org/wiki/Merge_sort
  */
-declare type Primitive = string | number | boolean;
-interface ArrayLikeWritable<T> {
-    length: number;
-    [n: number]: T;
-}
+import { ArrayLikeWritable, Primitive } from '@tsdotnet/common-interfaces';
 /**
  * Merge internalSort O(n log (n))
  * Warning: Uses recursion.
@@ -16,4 +12,3 @@ interface ArrayLikeWritable<T> {
  * @returns {number[]}
  */
 export default function mergeSort<T extends Primitive, TArray extends ArrayLikeWritable<T>>(target: TArray): TArray;
-export {};

@@ -3,11 +3,7 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-declare type Primitive = string | number | boolean;
-interface ArrayLikeWritable<T> {
-    length: number;
-    [n: number]: T;
-}
+import { ArrayLikeWritable, Primitive } from '@tsdotnet/common-interfaces';
 /**
  * Quick internalSort O(n log (n))
  * Warning: Uses recursion.
@@ -15,4 +11,3 @@ interface ArrayLikeWritable<T> {
  * @returns {[]}
  */
 export default function quickSort<T extends Primitive, TArray extends ArrayLikeWritable<T>>(target: TArray): TArray;
-export {};

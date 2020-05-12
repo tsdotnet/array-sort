@@ -5,15 +5,7 @@
  */
 
 import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
-
-type Primitive = string | number | boolean;
-
-interface ArrayLikeWritable<T>
-{
-	length: number;
-
-	[n: number]: T;
-}
+import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
 
 /**
  * Quick internalSort O(n log (n))
