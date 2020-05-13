@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.quickSort = exports.mergeSort = exports.insertionSort = void 0;
 const tslib_1 = require("tslib");
 const insertionSort_1 = tslib_1.__importDefault(require("./insertionSort"));
 exports.insertionSort = insertionSort_1.default;
