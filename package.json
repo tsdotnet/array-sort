@@ -53,7 +53,7 @@
     "typescript": "^3.9.2"
   },
   "dependencies": {
-    "@tsdotnet/array-init": "^1.0.8",
+    "@tsdotnet/array-init": "^1.0.9",
     "@tsdotnet/common-interfaces": "^1.0.4",
     "@tsdotnet/exceptions": "^1.0.15"
   }
