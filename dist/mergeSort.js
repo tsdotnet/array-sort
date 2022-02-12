@@ -7,8 +7,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
-const array_init_1 = tslib_1.__importDefault(require("@tsdotnet/array-init"));
+const ArgumentNullException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+const array_init_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/array-init"));
 /**
  * Merge internalSort O(n log (n))
  * Warning: Uses recursion.
@@ -19,7 +19,7 @@ function mergeSort(target) {
     if (!target)
         throw new ArgumentNullException_1.default('target');
     const len = target.length;
-    return len < 2 ? target : sort(target, 0, len, array_init_1.default(len));
+    return len < 2 ? target : sort(target, 0, len, (0, array_init_1.default)(len));
 }
 exports.default = mergeSort;
 function sort(target, start, end, temp) {
