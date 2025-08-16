@@ -5,8 +5,8 @@
  * Licensing: MIT
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+exports.default = quickSort;
+const exceptions_1 = require("@tsdotnet/exceptions");
 /**
  * Quick internalSort O(n log (n))
  * Warning: Uses recursion.
@@ -15,11 +15,10 @@ const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/excep
  */
 function quickSort(target) {
     if (!target)
-        throw new ArgumentNullException_1.default('target');
+        throw new exceptions_1.ArgumentNullException('target');
     const len = target.length;
     return target.length < 2 ? target : sort(target, 0, len - 1);
 }
-exports.default = quickSort;
 function sort(target, low, high) {
     if (low < high) {
         // Partition first...

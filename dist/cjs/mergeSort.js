@@ -1,22 +1,26 @@
+"use strict";
 /*!
  * @author Sebastian Belmar / https://github.com/sebabelmar/
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  * https://en.wikipedia.org/wiki/Merge_sort
  */
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
-import arrayInit from '@tsdotnet/array-init';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = mergeSort;
+const tslib_1 = require("tslib");
+const exceptions_1 = require("@tsdotnet/exceptions");
+const array_init_1 = tslib_1.__importDefault(require("@tsdotnet/array-init"));
 /**
  * Merge internalSort O(n log (n))
  * Warning: Uses recursion.
  * @param target
  * @returns {number[]}
  */
-export default function mergeSort(target) {
+function mergeSort(target) {
     if (!target)
-        throw new ArgumentNullException('target');
+        throw new exceptions_1.ArgumentNullException('target');
     const len = target.length;
-    return len < 2 ? target : sort(target, 0, len, arrayInit(len));
+    return len < 2 ? target : sort(target, 0, len, (0, array_init_1.default)(len));
 }
 function sort(target, start, end, temp) {
     if (end - start > 1) {

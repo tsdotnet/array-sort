@@ -1,19 +1,16 @@
-"use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
+import { ArgumentNullException } from '@tsdotnet/exceptions';
 /**
  * https://en.wikipedia.org/wiki/Insertion_sort
  * @param target
  * @returns {[]}
  */
-function insertionSort(target) {
+export default function insertionSort(target) {
     if (!target)
-        throw new ArgumentNullException_1.default('target');
+        throw new ArgumentNullException('target');
     const len = target.length;
     for (let i = 1; i < len; i++) {
         let j = i, j1;
@@ -26,5 +23,4 @@ function insertionSort(target) {
     }
     return target;
 }
-exports.default = insertionSort;
 //# sourceMappingURL=insertionSort.js.map

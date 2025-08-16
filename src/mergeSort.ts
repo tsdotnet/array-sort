@@ -5,7 +5,7 @@
  * https://en.wikipedia.org/wiki/Merge_sort
  */
 
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import {ArgumentNullException} from '@tsdotnet/exceptions';
 import arrayInit from '@tsdotnet/array-init';
 import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
 

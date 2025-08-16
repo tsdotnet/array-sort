@@ -3,7 +3,7 @@
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import { ArgumentNullException } from '@tsdotnet/exceptions';
 /**
  * Quick internalSort O(n log (n))
  * Warning: Uses recursion.

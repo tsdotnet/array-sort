@@ -1,27 +1,23 @@
-"use strict";
 /*!
  * @author Sebastian Belmar / https://github.com/sebabelmar/
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  * https://en.wikipedia.org/wiki/Merge_sort
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const tslib_1 = require("tslib");
-const ArgumentNullException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentNullException"));
-const array_init_1 = tslib_1.__importDefault(require("@tsdotnet/array-init"));
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+import arrayInit from '@tsdotnet/array-init';
 /**
  * Merge internalSort O(n log (n))
  * Warning: Uses recursion.
  * @param target
  * @returns {number[]}
  */
-function mergeSort(target) {
+export default function mergeSort(target) {
     if (!target)
-        throw new ArgumentNullException_1.default('target');
+        throw new ArgumentNullException('target');
     const len = target.length;
-    return len < 2 ? target : sort(target, 0, len, (0, array_init_1.default)(len));
+    return len < 2 ? target : sort(target, 0, len, arrayInit(len));
 }
-exports.default = mergeSort;
 function sort(target, start, end, temp) {
     if (end - start > 1) {
         // Step 1: Sort the left and right parts.

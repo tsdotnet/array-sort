@@ -4,7 +4,7 @@
  * Licensing: MIT
  */
 
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+import {ArgumentNullException} from '@tsdotnet/exceptions';
 import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
 
 /**

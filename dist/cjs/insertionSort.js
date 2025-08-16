@@ -1,16 +1,19 @@
+"use strict";
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-import ArgumentNullException from '@tsdotnet/exceptions/dist/ArgumentNullException';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = insertionSort;
+const exceptions_1 = require("@tsdotnet/exceptions");
 /**
  * https://en.wikipedia.org/wiki/Insertion_sort
  * @param target
  * @returns {[]}
  */
-export default function insertionSort(target) {
+function insertionSort(target) {
     if (!target)
-        throw new ArgumentNullException('target');
+        throw new exceptions_1.ArgumentNullException('target');
     const len = target.length;
     for (let i = 1; i < len; i++) {
         let j = i, j1;
