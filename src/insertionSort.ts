@@ -22,10 +22,13 @@ export default function insertionSort<T extends Primitive, TArray extends ArrayL
 		let j = i,
 			j1: number;
 
+		// @ts-expect-error Error occurse because it might be undefined.
 		while(j>0 && target[(j1 = j - 1)]>target[j])
 		{
-			const swap = target[j];
+			const swap : T | undefined = target[j];
+			// @ts-expect-error Error occurse because it might be undefined.
 			target[j] = target[j1];
+			// @ts-expect-error Error occurse because it might be undefined.
 			target[j1] = swap;
 			j--;
 		}

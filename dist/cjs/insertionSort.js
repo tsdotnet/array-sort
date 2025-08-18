@@ -6,11 +6,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = insertionSort;
 const exceptions_1 = require("@tsdotnet/exceptions");
-/**
- * https://en.wikipedia.org/wiki/Insertion_sort
- * @param target
- * @returns {[]}
- */
 function insertionSort(target) {
     if (!target)
         throw new exceptions_1.ArgumentNullException('target');

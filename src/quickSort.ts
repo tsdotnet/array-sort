@@ -4,8 +4,8 @@
  * Licensing: MIT
  */
 
-import {ArgumentNullException} from '@tsdotnet/exceptions';
-import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+import { ArrayLikeWritable, Primitive } from '@tsdotnet/common-interfaces';
 
 /**
  * Quick internalSort O(n log (n))
@@ -13,33 +13,30 @@ import {ArrayLikeWritable, Primitive} from '@tsdotnet/common-interfaces';
  * @param target
  * @returns {[]}
  */
-export default function quickSort<T extends Primitive, TArray extends ArrayLikeWritable<T>> (target: TArray): TArray {
-	if(!target) throw new ArgumentNullException('target');
+export default function quickSort<T extends Primitive, TArray extends ArrayLikeWritable<T>>(target: TArray): TArray {
+	if (!target) throw new ArgumentNullException('target');
 	const len = target.length;
-	return target.length<2 ? target : sort(target, 0, len - 1);
+	return target.length < 2 ? target : sort(target, 0, len - 1);
 }
 
-function sort<T extends Primitive, TArray extends ArrayLikeWritable<T>> (
+function sort<T extends Primitive, TArray extends ArrayLikeWritable<T | undefined>>(
 	target: TArray,
 	low: number,
 	high: number
-): TArray
-{
-	if(low<high)
-	{
+): TArray {
+	if (low < high) {
 		// Partition first...
-		let swap: T;
-		const pivotIndex = Math.floor((low + high)/2);
+		let swap: T | undefined;
+		const pivotIndex = Math.floor((low + high) / 2);
 
 		swap = target[pivotIndex];
 		target[pivotIndex] = target[high];
 		target[high] = swap;
 
 		let i = low;
-		for(let j = low; j<high; j++)
-		{
-			if(target[j]<target[high])
-			{
+		for (let j = low; j < high; j++) {
+			// @ts-expect-error This will work well enough.
+			if (target[j] < target[high]) {
 				swap = target[i];
 				target[i] = target[j];
 				target[j] = swap;

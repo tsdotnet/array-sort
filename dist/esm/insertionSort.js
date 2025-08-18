@@ -1,14 +1,10 @@
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+
 /*!
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-import { ArgumentNullException } from '@tsdotnet/exceptions';
-/**
- * https://en.wikipedia.org/wiki/Insertion_sort
- * @param target
- * @returns {[]}
- */
-export default function insertionSort(target) {
+function insertionSort(target) {
     if (!target)
         throw new ArgumentNullException('target');
     const len = target.length;
@@ -23,4 +19,6 @@ export default function insertionSort(target) {
     }
     return target;
 }
+
+export { insertionSort as default };
 //# sourceMappingURL=insertionSort.js.map

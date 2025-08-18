@@ -7,12 +7,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = quickSort;
 const exceptions_1 = require("@tsdotnet/exceptions");
-/**
- * Quick internalSort O(n log (n))
- * Warning: Uses recursion.
- * @param target
- * @returns {[]}
- */
 function quickSort(target) {
     if (!target)
         throw new exceptions_1.ArgumentNullException('target');
@@ -21,7 +15,6 @@ function quickSort(target) {
 }
 function sort(target, low, high) {
     if (low < high) {
-        // Partition first...
         let swap;
         const pivotIndex = Math.floor((low + high) / 2);
         swap = target[pivotIndex];

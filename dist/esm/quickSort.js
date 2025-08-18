@@ -1,16 +1,11 @@
+import { ArgumentNullException } from '@tsdotnet/exceptions';
+
 /*!
  * @author Sebastian Belmar / https://github.com/sebabelmar/
  * @author electricessence / https://github.com/electricessence/
  * Licensing: MIT
  */
-import { ArgumentNullException } from '@tsdotnet/exceptions';
-/**
- * Quick internalSort O(n log (n))
- * Warning: Uses recursion.
- * @param target
- * @returns {[]}
- */
-export default function quickSort(target) {
+function quickSort(target) {
     if (!target)
         throw new ArgumentNullException('target');
     const len = target.length;
@@ -18,7 +13,6 @@ export default function quickSort(target) {
 }
 function sort(target, low, high) {
     if (low < high) {
-        // Partition first...
         let swap;
         const pivotIndex = Math.floor((low + high) / 2);
         swap = target[pivotIndex];
@@ -41,4 +35,6 @@ function sort(target, low, high) {
     }
     return target;
 }
+
+export { quickSort as default };
 //# sourceMappingURL=quickSort.js.map
