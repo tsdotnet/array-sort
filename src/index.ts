@@ -1,6 +1,6 @@
-import insertionSort from './insertionSort';
-import mergeSort from './mergeSort';
-import quickSort from './quickSort';
+import insertionSort from './insertionSort.js';
+import mergeSort from './mergeSort.js';
+import quickSort from './quickSort.js';
 
 export {
 	insertionSort,
