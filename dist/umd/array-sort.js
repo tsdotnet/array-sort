@@ -4,6 +4,10 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.tsdotnet = global.tsdotnet || {}, global.tsdotnet.arraySort = global.tsdotnet.arraySort || {}), global.tsdotnet.exceptions, global.tsdotnet.arrayInit));
 })(this, (function (exports, exceptions, arrayInit) { 'use strict';
 
+    function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
+
+    var arrayInit__default = /*#__PURE__*/_interopDefault(arrayInit);
+
     /*!
      * @author electricessence / https://github.com/electricessence/
      * Licensing: MIT
@@ -34,7 +38,7 @@
         if (!target)
             throw new exceptions.ArgumentNullException('target');
         const len = target.length;
-        return len < 2 ? target : sort$1(target, 0, len, arrayInit(len));
+        return len < 2 ? target : sort$1(target, 0, len, arrayInit__default.default(len));
     }
     function sort$1(target, start, end, temp) {
         if (end - start > 1) {
