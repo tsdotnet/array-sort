@@ -1,4 +1,4 @@
-<a href="https://tsdotnet.github.io/array-sort/"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/array-sort@master/assets/banner.svg" alt="@tsdotnet/array-sort: Sort primitives in place. Insertion, merge and quick sort."></a>
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/array-sort@master/assets/banner.svg" alt="@tsdotnet/array-sort: Sort primitives in place. Insertion, merge and quick sort."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/array-sort.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/array-sort)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/array-sort/blob/master/LICENSE)
